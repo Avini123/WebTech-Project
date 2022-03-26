@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 12px;
+    font-size: 15pt;
+    font-weight: bold;
+  }
+  li a {
+    display: inline-block;
+    color: royalblue;
+  }
+  nav {
+    background-color: lightsalmon;
+    padding: 10px;
+  }
+  li a:hover {
+    color: teal;
+  }
+  a:link {
+    text-decoration: none;
+  }

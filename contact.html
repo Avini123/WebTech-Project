@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Functionally Extinct Animals">
+    <title>Contact/Feedback</title>
+    <link rel="stylesheet" href="styles/navigationbar.css" />
+    <link rel="icon" href="images/favicontoucan.png" type="image/x-icon">
+    <style>
+        h1 {
+            text-align: center;
+            color: white;
+            border: 5px solid turquoise;
+            margin-left: 375px;
+            margin-right: 375px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        form {
+          width: 50%;
+          background-color: silver;
+          padding-left: 5%;
+          padding-top: 5%;
+          padding-bottom: 5%;
+          margin-left: auto;
+          margin-right: auto;
+          color: blue;
+          font-size: 15pt;
+        }
+        body {
+          background-image: url(images/nature.jpg);
+          background-repeat: no-repeat;
+          background-size: 1720px;
+        }
+        p {
+          color: aqua;
+          font-size: 15pt;
+          font-weight: bold;
+          border: 5px solid lightblue;
+          margin-right: 1000px;
+        }
+        .list {
+          color: bisque;
+          border: 5px solid lightblue;
+        }
+        #mail{
+          color: bisque;
+        }
+      </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+      <li><a href="contact.html">Contact/Feedback</a></li>
+    </ul>
+  </nav>
+  <h1>Contact/Feedback</h1>
+    <hr />
+      <ul>
+        <li><a class="list" href="https://github.com/Avini123/WebTech">GitHub</a></li>
+        <li><a class="list" href="https://www.facebook.com/settings?tab=account&section=username">Facebook Profile</a></li>
+      </ul>
+    <p>My Email: <a id="mail" href="mailto:ani1@babson.edu">ani1@babson.edu</a></p>
+  <form action="https://oim-apis.herokuapp.com/form2" method="post">
+    <div>
+      <label for="last-name"> Last Name:</label>
+      <input
+        type="text"
+        id="last-name"
+        name="last-name"
+        placeholder="Last Name"
+        style="height: 20px"
+      />
+    </div>
+    &nbsp;
+    <div>
+      <label for="first-name"> First Name:</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first-Name"
+        placeholder="First Name"
+        style="height: 20px"
+      />
+    </div>
+    &nbsp;
+    <div>
+      <label for="Email"> Email:</label>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        style="height: 20px"
+      />
+    </div>
+    &nbsp;
+    <div>
+      <div>
+        <label for="rating">How Do You Like The Website?</label>
+        <select name="rate" id="rating">
+          <option value="">-- Rating</option>
+          <option value="Bad">Bad</option>
+          <option value="Average">Average</option>
+          <option value="Good">Good</option>
+          <option value="Excellenet">Excellent</option>
+        </select>
+      </div>
+    </div>
+    &nbsp;
+    <div>
+      <label for="comments">Leave a Reply:</label>
+    </div>
+    <div>
+      <textarea
+        id="comment"
+        name="comments"
+        rows="15"
+        cols="50"
+        placeholder="Enter your comment here"
+      ></textarea>
+    </div>
+    &nbsp;
+    <div>
+      <button type="submit">
+        SUBMIT
+      </button>
+      <button type="reset">
+        RESET
+      </button>
+    </div>
+  </form>
+</body>
+</html>
