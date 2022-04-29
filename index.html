@@ -13,7 +13,12 @@
       h1 {
         text-align: center;
       }
-      img {
+      img#animals {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      img#search {
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -43,16 +48,15 @@
         margin-left: 400px;
         margin-right: 400px;
       }
-      @media only screen and (max-width:500px) {
-        /* .first-set, .second-set, .third-set { */
-          img, h1{
+       @media only screen and (max-width:1000px) {
+          h2{
           width:100%;
           margin-left: auto;
           margin-right: auto;
-          display: block;
-          /* text-align: center; */
-        }
-      }
+          display: block; 
+          text-align: center; 
+         }
+      } 
     </style>
   </head>
   <body>
@@ -79,7 +83,7 @@
       </tr>
       <tr>
         <td class="mini-heading">Objective</td>
-        <td>
+        <td class="one">
           The objective of this website is to bring awareness to the species
           that will become extinct due to human activities.
         </td>
@@ -109,6 +113,7 @@
     <h2>Curious? Click On The Search Icon!</h2>
     <a href="sitemap.html"><img
             src="images/searchicon.jpg"
+            id="search"
             alt="search"
             title="search"
             height="200"
