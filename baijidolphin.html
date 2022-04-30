@@ -52,12 +52,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>Baiji Dolphin</h1>
-    <img src="images/dolphin.jpg" alt="baiji dolphin" title="baiji dolphin" height="300" width="500"/>
+    <img id="dolphin" src="images/dolphin.jpg" alt="baiji dolphin" title="baiji dolphin" height="300" width="500"/>
     <p>The Baiji Dolphin is a dolphin species that is thought to have been the first of its species to be driven to extinction due to human activity. By local fishermen and boatmen, it is regarded as the goddess of protection. This kind of dolphin saw its declining population during China's industrialization. The last known living Baiji Dolphin died in 2002, causing the World Wildlife Reservation to call for the preservation of any of the specie's habitat in case it can be located or revived. In 2007, there was a Baiji Dolphin spoted in the Yangtze. However, this is not enough for the species to recover its population. Thus, the dolphin is considered a functionally extinct animal. On the map below, it shows the speculated distribution of this species.</p>
     <h2>Distribution Map</h2>
     <img src="images/Baijidistributionmap.jpg" alt="baiji distribution" title="baiji distribution" height="300" width="500"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+        
+        const image = document.getElementById("dolphin");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/baiji3.png";
+        }
+        document.getElementById("dolphin").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/dolphin.jpg";
+        }
+        document.getElementById("dolphin").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>

@@ -52,12 +52,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>Yangtze Giant Softshell Turtle</h1>
-    <img src="images/turtle.jpg" alt="yangtze giant softshell turtle" title="yangtze giant softshell turtle" height="300" width="500"/>
+    <img id="turtle" src="images/turtle.jpg" alt="yangtze giant softshell turtle" title="yangtze giant softshell turtle" height="300" width="500"/>
     <p>The Yangtze Giant Softshell Turtle is an extremely rare turle native to eastern and southern China and northern Vietnam. It inhabits the Yangtze River and Lake Tai. This animal is on the brink of extinction due to habitat loss and hunting for food, medicine, and trophy. Today, only 5-6 of this animal is known. One is in captivity in China and the other 3-4 are in the wild in Vietnam. In 2019, the female of the last breeding pair has died. Fortunately, a wild female was found in Vietnam in 2020.</p>
     <h2>Distribution Map</h2>
     <img src="images/turtlemap.png" alt="yangtze giant softshell turtle distribution" title="yangtze giant softshell turtle distribution" height="300" width="300"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+
+        const image = document.getElementById("turtle");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/soft.jpg";
+        }
+        document.getElementById("turtle").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/turtle.jpg";
+        }
+        document.getElementById("turtle").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>

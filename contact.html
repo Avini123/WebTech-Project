@@ -11,8 +11,7 @@
     <style>
         h1 {
             text-align: center;
-            color: white;
-            border: 5px solid turquoise;
+            border: 5px solid lightseagreen;
             margin-left: 375px;
             margin-right: 375px;
             padding-left: auto;
@@ -30,24 +29,17 @@
           font-size: 15pt;
         }
         body {
-          background-image: url(images/nature.jpg);
-          background-repeat: no-repeat;
-          background-size: 1720px;
+        background-color: skyblue;
         }
-        p {
-          color: aqua;
-          font-size: 15pt;
-          font-weight: bold;
-          border: 5px solid lightblue;
-          margin-right: 1000px;
+        @media only screen and (max-width:1000px) {
+          h1, form, nav{
+          width:100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          text-align: center;
         }
-        .list {
-          color: bisque;
-          border: 5px solid lightblue;
-        }
-        #mail{
-          color: bisque;
-        }
+      } 
       </style>
 </head>
 <body>
@@ -56,15 +48,23 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="sitemap.html">Sitemap</a></li>
       <li><a href="contact.html">Contact/Feedback</a></li>
+      <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+        <div class="dropdown-content">
+          <a href="baijidolphin.html">Baiji Dolphin</a>
+          <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+          <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+          <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+          <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+          <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+          <a href="southchinatiger.html">South China Tiger</a>
+          <a href="vaquita.html">Vaquita</a>
+          <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+        </div>
+        </li>
+        <li><a href="conservation.html">Conservation Organizations</a></li>
     </ul>
   </nav>
   <h1>Contact/Feedback</h1>
-    <hr />
-      <ul>
-        <li><a class="list" href="https://github.com/Avini123/WebTech">GitHub</a></li>
-        <li><a class="list" href="https://www.facebook.com/settings?tab=account&section=username">Facebook Profile</a></li>
-      </ul>
-    <p>My Email: <a id="mail" href="mailto:ani1@babson.edu">ani1@babson.edu</a></p>
   <form action="https://oim-apis.herokuapp.com/form2" method="post">
     <div>
       <label for="last-name"> Last Name:</label>
@@ -126,7 +126,7 @@
     </div>
     &nbsp;
     <div>
-      <button type="submit">
+      <button id="submit-button" type="submit">
         SUBMIT
       </button>
       <button type="reset">
@@ -134,5 +134,31 @@
       </button>
     </div>
   </form>
+  <script>
+        let first = document.getElementById("last-name");
+        let last = document.getElementById("first-name");
+        let email = document.getElementById("email");
+        let reply = document.getElementById("comment");
+        let submit = document.getElementById("submit-button")
+        
+        submit.addEventListener("click", () => {
+            if (first.value == "" || last.value =="" || email.value =="" || reply.value =="") {
+                //if there are no inputs
+                alert("Please type your last name, first name, email, and comment.")
+            } else {
+                alert("Thank You For Submitting Your Response!")
+            }
+        })
+
+        function changeBackgroundColor() {
+        const bgColors = ["darkmagenta", "orchid", "lavender", "honeydew", "gold", "peachpuff"];
+        const n = bgColors.length;
+        const randIndex = Math.floor(Math.random() * n);
+        // const b = document.getElementById("bodyA");
+        const b = document.querySelector("body");
+        b.style.backgroundColor = bgColors[randIndex];
+      }
+      document.querySelector("body").onclick = changeBackgroundColor;
+  </script>
 </body>
 </html>

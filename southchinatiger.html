@@ -52,12 +52,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>South China Tiger</h1>
-    <img src="images/tiger.jpg" alt="south china tiger" title="south china tiger" height="300" width="500"/>
+    <img id="tiger" src="images/tiger.jpg" alt="south china tiger" title="south china tiger" height="300" width="500"/>
     <p>The South China Tiger is native to southern China. It is thought to be possibly extinct since its last recorded sighting was in the late 1980s. Continued survival was unlikely due to human activities and low number of prey. In 2007, a supposed South China Tiger attacked a cow in a county.</p>
     <h2>Distribution Map</h2>
     <img src="images/tigermap.png" alt="south china tiger distribution" title="south china tiger distribution" height="300" width="300"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+
+        const image = document.getElementById("tiger");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/south.jpg";
+        }
+        document.getElementById("tiger").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/tiger.jpg";
+        }
+        document.getElementById("tiger").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>

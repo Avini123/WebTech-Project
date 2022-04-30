@@ -52,12 +52,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>Northern White Rhinoceros</h1>
-    <img src="images/rhino1.jpg" alt="northern white rhinoceros" title="northern white rhinoceros" height="300" width="500"/>
+    <img id="northern" src="images/rhino1.jpg" alt="northern white rhinoceros" title="northern white rhinoceros" height="300" width="500"/>
     <p>The Northern White Rhinoceros was found in many countries in East and Central Africa. This species primarily graze on the grasslands and savanna woodlands of these regions. Since 2018, only two known rhinos were left. Unfortunately, both of them are female, meaning this species is functionally extinct. Conservation efforts have been made to revive this species. In 2019, 10 egg cells from these female rhinos were used to be artificially inseminated with the frozen sperm of a dead, male Northern White Rhinoceros. Currently, there are a total of 14 embryos, giving the species a tiny hope of survival. On the map below, the area shown in orange is the former distribution of this species.</p>
     <h2>Distribution Map</h2>
     <img src="images/rhino1map.png" alt="northern white rhinoceros distribution" title="northern white rhinoceros distribution" height="300" width="300"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+
+        const image = document.getElementById("northern");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/northern.jpg";
+        }
+        document.getElementById("northern").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/rhino1.jpg";
+        }
+        document.getElementById("northern").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>

@@ -53,12 +53,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>Ivory-Billed Woodpecker</h1>
-    <img src="images/woodpecker.jpg" alt="ivory-billed woodpecker" title="ivory-billed woodpecker" height="300" width="500"/>
+    <img id="bird" src="images/woodpecker.jpg" alt="ivory-billed woodpecker" title="ivory-billed woodpecker" height="300" width="500"/>
     <p>The Ivory-Billed Woodpecker is native to the forests of Southern United States and Cuba. Habitat destruction and hunting have devastated the species's population. In the 21th century, sightings have been reported. However, due to its lack of confirmed sightings, the U.S. Fish and Wildlife Service have proposed for a declaration for the species to be extinct. The final decision is due by September 2022. Despite this, some people still hope for the Ivory-Billed Woodpecker to reappear. Sadly, it is now a functionally extinct bird.</p>
     <h2>Distribution Map</h2>
     <img src="images/birdmap.jpg" alt="ivory-billed woodpecker distribution" title="ivory-billed woodpecker distribution" height="300" width="300"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+        
+        const image = document.getElementById("bird");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/bird.jpg";
+        }
+        document.getElementById("bird").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/woodpecker.jpg";
+        }
+        document.getElementById("bird").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>

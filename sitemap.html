@@ -51,17 +51,25 @@
             padding-left: auto;
             padding-right: auto;
       }
-      @media only screen and (max-width:500px) {
-          div, h1{
-          /* width:100%; */
+      @media only screen and (max-width:1250px) {
+          div{
+          width:100%;
           margin-left: auto;
           margin-right: auto;
           display: block;
-          background-color: red;
-          /* text-align: center; */
+          text-align: center;
         }
-      }
-      
+      } 
+      @media only screen and (max-width:1250px) {
+          h1, nav{
+          width:100%;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          text-align: center;
+        }
+      } 
+       
     </style>
   </head>
   <body>
@@ -71,6 +79,20 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     </nav>

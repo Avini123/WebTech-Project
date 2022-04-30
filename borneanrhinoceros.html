@@ -52,12 +52,60 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sitemap.html">Sitemap</a></li>
           <li><a href="contact.html">Contact/Feedback</a></li>
+          <li class="dropdown"><a href="animals" class="dropbtn">The Animals</a>
+            <div class="dropdown-content">
+              <a href="baijidolphin.html">Baiji Dolphin</a>
+              <a href="borneanrhinoceros.html">Bornean Rhinoceros</a>
+              <a href="christmasislandshrew.html">Christmas Island Shrew</a>
+              <a href="ivorybilledwoodpecker.html">Ivory-Billed Woodpecker</a>
+              <a href="northatlanticrightwhale.html">Northern Atlantic Right Whale</a>
+              <a href="northernwhiterhinoceros.html">Northern White Rhinoceros</a>
+              <a href="southchinatiger.html">South China Tiger</a>
+              <a href="vaquita.html">Vaquita</a>
+              <a href="yangtzegiantsoftshellturtle.html">Yangtze Giant Softshell Turtle</a>
+            </div>
+            </li>
+            <li><a href="conservation.html">Conservation Organizations</a></li>
         </ul>
       </nav>
     <h1>Bornean Rhinoceros</h1>
-    <img src="images/rhino2.jpg" alt="bornean rhinoceros" title="bornean rhinoceros" height="300" width="500"/>
+    <img id="bornean" src="images/rhino2.jpg" alt="bornean rhinoceros" title="bornean rhinoceros" height="300" width="500"/>
     <p>The Bornean Rhinoceros inhabits all over Borneo, especially the rainforests. Currently, the species considered functionally extinct since only one female is surviving in captivity. Howeever, in 2016, another female was captured. This shows evidence that more Bornean Rhinoceros might still exist in the wild.</p>
     <h2>Distribution Map</h2>
     <img src="images/rhino2map.jpg" alt="bornean rhinoceros distribution" title="bornean rhinoceros distribution" height="300" width="500"/>
+    <script>
+        function changeText() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "red";
+        }
+        document.querySelector("h1").onmouseover = function () {
+            changeText();
+        };
+
+        function changeText2() {
+            const heading = document.querySelector("h1");
+            heading.style.color = "white";
+        }
+        document.querySelector("h1").onmouseout = function () {
+            changeText2();
+        };
+
+        const image = document.getElementById("bornean");
+        function onImage() {
+            console.log("...starting...");
+            image.src = "images/bornean.jpg";
+        }
+        document.getElementById("bornean").onmouseover = function(){
+            onImage();
+        };
+        
+        function offImage(){
+            console.log("...ending...");
+            image.src = "images/rhino2.jpg";
+        }
+        document.getElementById("bornean").onmouseout = function(){
+            offImage();
+        };
+    </script>
 </body>
 </html>
